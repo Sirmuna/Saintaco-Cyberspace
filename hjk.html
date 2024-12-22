@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>popup</title>
+    <style>
+      #popup-form {
+        position: fixed;
+        background-color: aqua;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 90vh;
+        width: 100%;
+      }
+      .home-contact-box form {
+        display: flex;
+        align-items: center;
+        background-color: antiquewhite;
+        padding: 50px;
+        border-radius: 10px;
+        gap: 50px;
+      }
+      button {
+        background-color: antiquewhite;
+        padding: 10px;
+        border-radius: 10px;
+        color: #000;
+      }
+      .input-box textarea{
+        resize: none;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn">Open ✔️</button>
+    <button id="end-btn">Close ❌</button>
+    <div id="popup-form">
+      <div class="home-contact-box">
+        <form action="https://formspree.io/f/xrbgwvpy" method="post"> 
+          <div class="section-title text-center mb-25">
+            <span>Contact with Us</span>
+            <h3 class="title">Contact Us Now!</h3>
+          </div>
+          <div class="input-box">
+            <input
+              type="text"
+              placeholder="Your Name"
+              name="Fullname"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <input
+              type="email"
+              placeholder="Email Address"
+              name="email"
+              required
+            />
+          </div>
+          <div class="input-box">
+            <textarea
+              name="Message"
+              id="#"
+              cols="30"
+              rows="10"
+              placeholder="Write a Message"
+              required
+            ></textarea>
+          </div>
+          <div class="input-box">
+            <button class="main-btn" type="submit">Send a message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const contactButton =
+      document.getElementById('btn');
+      const contactForm =
+      document.getElementById('popup-form');
+      const closeButton =
+      document.getElementById('end-btn')
+
+      contactButton.addEventListener('click', function() {
+        contactForm.style.display = 'flex';
+      });
+
+      closeButton.addEventListener('click', function() {
+        contactForm.style.display = 'none'
+      });
+    </script>
+  </body>
+</html>

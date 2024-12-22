@@ -201,6 +201,10 @@ p {
   height: 400px;
   opacity: 0;
 }
+#web-btn{
+  background-color: #fff;
+  color: #5f2dee;
+}
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .section-title {
@@ -4108,6 +4112,150 @@ p {
 }
 .single-project-item:hover img {
   transform: scale(1.1);
+}
+/* web popup */
+
+.web-container{
+  display: none;
+  height: 100vh;
+  width: 100%;
+  background-color: #ffffffe8;
+  backdrop-filter: blur(10px);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  transition: ease .5s;
+}
+.web-container div{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  background-color: #602dee;
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 50px;
+  transition: ease .5s;
+}
+@media (max-width: 992px) {
+  .web-container{
+    z-index: 10;
+  }
+  .web-container div {
+  padding-top: 1px;
+  }
+}
+@media (max-width: 767px) {
+  .web-container{
+    justify-content: center;
+    z-index: 100;
+  }
+  .web-container div {
+  padding: 20px;
+  }
+  #web-close{
+    align-self: center;
+    margin-right: -60px;
+  }
+}
+
+.web-container div button{
+  outline: transparent;
+  border: transparent;
+  padding: 10px;
+  border-radius: 10px;
+}
+#web-close{
+  outline: transparent;
+  border: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  align-self: flex-start;
+  margin-top: 65px;
+}
+#web-form{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #ffffffda;
+  backdrop-filter: blur(20px);
+  z-index: 100;
+  transition: ease .5s;
+}
+#web-form form{
+  background: #f4f2f9;
+  padding: 60px 80px 50px;
+  background-image: url(../images/contact-shape.png);
+  background-size: auto;
+  background-position: top right;
+  background-repeat: no-repeat;
+  transition: .5s ease;
+}
+#form-close{
+  outline: transparent;
+  border: transparent;
+  padding: 10px;
+  border-radius: 10px;
+  align-self: flex-start;
+  margin-top: 5px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  #web-form form {
+    padding: 30px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #web-form form {
+    padding: 30px;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 767px) {
+  #web-form form {
+    padding: 30px;
+    margin-top: 30px;
+  }
+}
+#web-form form .input-box {
+  margin-bottom: 10px;
+}
+#web-form form .input-box input {
+  width: 100%;
+  height: 60px;
+  padding-left: 40px;
+  background: #fff;
+  border: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6c6a72;
+}
+#web-form form .input-box input::placeholder {
+  color: #6c6a72;
+  opacity: 1;
+}
+#web-form form .input-box textarea {
+  width: 100%;
+  height: 150px;
+  padding-left: 40px;
+  padding-top: 15px;
+  background: #fff;
+  border: 0;
+  resize: none;
+  font-size: 14px;
+  color: #6c6a72;
+}
+#web-form form .input-box button {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border: 1px solid #5f2dee;
 }
 
 .infetech-project-slide-2 .col-lg-3,
