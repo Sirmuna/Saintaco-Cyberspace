@@ -27,8 +27,11 @@ body {
   font-weight: normal;
   font-style: normal;
   color: #6c6a72;
+  overflow-x: hidden;
 }
-
+html{
+  overflow-x: hidden;
+}
 * {
   margin: 0;
   padding: 0;
