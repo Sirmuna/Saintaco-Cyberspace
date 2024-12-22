@@ -4205,6 +4205,7 @@ p {
   border-radius: 10px;
   align-self: flex-start;
   margin-top: 5px;
+  margin-right: -50px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   #web-form form {
