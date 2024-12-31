@@ -185,8 +185,8 @@
     const webForm = document.getElementById("web-form");
     const closeForm = document.getElementById("form-close");
     const webMail = document.getElementById("form-btn");
+    const formPop = document.getElementById("form-learnmore");
 
-      
     webButton.addEventListener("click", function () {
       openWebBtn.style.display = "flex";
     });
@@ -194,11 +194,37 @@
       openWebBtn.style.display = "none";
     });
     webMail.addEventListener("click", function () {
-        webForm.style.display = "flex";
-        openWebBtn.style.display = "none";
+      webForm.style.display = "flex";
+      openWebBtn.style.display = "none";
     });
     closeForm.addEventListener("click", function () {
-        webForm.style.display = "none";
+      webForm.style.display = "none";
+    });
+    formPop.addEventListener("click", function () {
+      webForm.style.display = "none";
+      whatsappPopup.style.display = "flex";
+    });
+
+    //== learnmore popup ==\\
+    const learnMore = document.getElementById("saintaco-learn");
+    // const abtLearnMore = document.getElementById("abt-saintaco-learn");
+    // const srvLearnMore = document.getElementById("srv-saintaco-learn");
+    const whatsappPopup = document.getElementById("wa-pop");
+    // const srvWhatsappPopup = document.getElementById("srv-wa-pop");
+    const closeButton = document.getElementById("wa-end-btn");
+
+    learnMore.addEventListener("click", function () {
+      whatsappPopup.style.display = "flex";
+    });
+    // abtLearnMore.addEventListener("click", function () {
+    //   whatsappPopup.style.display = "flex";
+    // });
+    // srvLearnMore.addEventListener("click", function () {
+    //   srvWhatsappPopup.style.display = "flex";
+    // });
+
+    closeButton.addEventListener("click", function () {
+      whatsappPopup.style.display = "none";
     });
 
     //===== client slide v1 js
