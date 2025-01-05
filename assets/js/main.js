@@ -3,9 +3,11 @@
 
   //===== Prealoder
 
-  if ($(".preloader").length) {
+  $(window).on("load", function () {
     $(".preloader").fadeOut();
-  }
+    isotopeintial();
+    $(".slick-slider").slick("refresh");
+  });
 
   jQuery(document).on("ready", function () {
     //===== Sticky
@@ -18,6 +20,8 @@
         jQuery(".header-sticky").addClass("sticky");
       }
     });
+
+    //
 
     /*---canvas menu activation---*/
     $(".canvas_open").on("click", function () {
@@ -206,25 +210,34 @@
     });
 
     //== learnmore popup ==\\
-    const learnMore = document.getElementById("saintaco-learn");
-    // const abtLearnMore = document.getElementById("abt-saintaco-learn");
-    // const srvLearnMore = document.getElementById("srv-saintaco-learn");
-    const whatsappPopup = document.getElementById("wa-pop");
-    // const srvWhatsappPopup = document.getElementById("srv-wa-pop");
-    const closeButton = document.getElementById("wa-end-btn");
 
-    learnMore.addEventListener("click", function () {
-      whatsappPopup.style.display = "flex";
+    // Get all popup buttons
+    const popupButtons = document.querySelectorAll(".pop-btn");
+    const popup = document.getElementById("wa-pop");
+    const closeButton = document.querySelector(".close-btn");
+    // Function to open the popup
+    const openPopup = () => {
+      popup.style.display = "flex";
+    };
+
+    // Function to close the popup
+    const closePopup = () => {
+      popup.style.display = "none";
+    };
+
+    // Add click event to all buttons
+    popupButtons.forEach((button) => {
+      button.addEventListener("click", openPopup);
     });
-    // abtLearnMore.addEventListener("click", function () {
-    //   whatsappPopup.style.display = "flex";
-    // });
-    // srvLearnMore.addEventListener("click", function () {
-    //   srvWhatsappPopup.style.display = "flex";
-    // });
 
-    closeButton.addEventListener("click", function () {
-      whatsappPopup.style.display = "none";
+    // Add click event to close button
+    closeButton.addEventListener("click", closePopup);
+
+    //Close popup when clicking outside the content
+    window.addEventListener("click", (event) => {
+      if (event.target === popup) {
+        closePopup();
+      }
     });
 
     //===== client slide v1 js

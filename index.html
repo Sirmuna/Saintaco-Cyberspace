@@ -49,11 +49,27 @@
   </head>
   <body>
     <!-- PRELOADER -->
-    <div class="preloader">
-      <div class="lds-ellipsis">
-        <span></span>
-        <span></span>
-        <span></span>
+    <div id="preloader" class="preloader">
+      <div id="loader" class="th-preloader">
+        <div class="animation-preloader">
+          <div class="txt-loading">
+            <span preloader-text="S" class="characters">S</span>
+
+            <span preloader-text="A" class="characters">A</span>
+
+            <span preloader-text="I" class="characters">I</span>
+
+            <span preloader-text="N" class="characters">N</span>
+
+            <span preloader-text="T" class="characters">T</span>
+
+            <span preloader-text="A" class="characters">A</span>
+
+            <span preloader-text="C" class="characters">C</span>
+
+            <span preloader-text="O" class="characters">O</span>
+          </div>
+        </div>
       </div>
     </div>
     <!-- END PRELOADER -->
@@ -94,6 +110,12 @@
                     <a href="./about.html">About</a>
                   </li>
                   <li class="menu-item-has-children active">
+                    <a href="./services.html">Services</a>
+                  </li>
+                  <li class="menu-item-has-children active">
+                    <a href="./contact.html">Contact</a>
+                  </li>
+                  <li class="menu-item-has-children active">
                     <a href="#">Pages</a>
                     <ul class="sub-menu">
                       <li><a href="./page-1.html">Our Team</a></li>
@@ -101,7 +123,7 @@
                     </ul>
                   </li>
                   <li class="menu-item-has-children active">
-                    <a href="#">Services</a>
+                    <a href="./services.html">Services</a>
                     <ul class="sub-menu">
                       <li>
                         <a href="./services.html#educational-services"
@@ -124,7 +146,7 @@
                     <a href="./projects.html">Projects</a>
                   </li>
                   <li class="menu-item-has-children active">
-                    <a href="./index.html#contact">Contact</a>
+                    <a href="./contact.html">Contact</a>
                   </li>
                 </ul>
               </div>
@@ -203,17 +225,17 @@
                   <a href="./services.html">Services</a>
                   <ul class="sub-menu">
                     <li>
-                      <a href="./index.html#services">Educational Services</a>
+                      <a href="./services.html#educational-services">Educational Services</a>
                     </li>
                     <li>
-                      <a href="./index.html#services">General Services</a>
+                      <a href="./services.html#General-services">General Services</a>
                     </li>
                     <li>
-                      <a href="./index.html#services">Computer Academy</a>
+                      <a href="./services.html#Computer-services">Computer Academy</a>
                     </li>
                   </ul>
                 </li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="./contact.html">Contact</a></li>
                 <li>
                   <a href="./services.html">Pages</a>
                   <ul class="sub-menu">
@@ -290,7 +312,7 @@
                     Innovation, All In One Place.
                   </p>
                   <button
-                    class="main-btn"
+                    class="pop-btn"
                     id="saintaco-learn"
                     data-animation="fadeInUp"
                     data-delay=".9s"
@@ -308,7 +330,7 @@
     <div class="whatsapp-popup" id="wa-pop">
       <div>
         <h5 id="wa-pop-h5">You'll Be Redirected To Whatsapp!</h5>
-        <button class="wa-pop-btn" id="wa-end-btn">Cancel</button>
+        <button class="close-btn" id="wa-end-btn">Cancel</button>
         <button class="wa-pop-btn" id="wa-btn">
           <a href="https://wa.me/2347065604027">Continue</a>
         </button>
@@ -576,7 +598,7 @@
                           <li>- Postgraduate registration</li>
                         </ul>
 
-                        <a class="main-btn" href="https://wa.me/2347065604027"
+                        <a class="pop-btn"
                           >APPLY</a
                         >
                       </div>
@@ -601,7 +623,7 @@
                           <li>- Acceptance fee payment</li>
                           <li>- School fees payment</li>
                         </ul>
-                        <a class="main-btn" href="https://wa.me/2347065604027"
+                        <a class="pop-btn"
                           >Make a payment</a
                         >
                       </div>
@@ -626,7 +648,7 @@
                           Register for the computer academy at your earliest
                           convenience
                         </p>
-                        <a class="main-btn" href="https://wa.me/2347065604027"
+                        <a class="pop-btn"
                           >ENROLL</a
                         >
                       </div>
@@ -652,7 +674,7 @@
                           <li>- JAMB original result</li>
                           <li>- NYSC registration</li>
                         </ul>
-                        <a class="main-btn" href="https://wa.me/2347065604027"
+                        <a class="pop-btn"
                           >REGISTER</a
                         >
                       </div>
@@ -680,7 +702,7 @@
                           <li>- Lamination</li>
                           <li>And More...</li>
                         </ul>
-                        <a class="main-btn" href="https://wa.me/2347065604027"
+                        <a class="pop-btn"
                           >EXPLORE</a
                         >
                       </div>
@@ -808,7 +830,7 @@
             <h3 class="title">Get a Website</h3>
           </div>
           <button id="form-btn">Send a Mail</button>
-          <button id="form-learnmore">Send a DM</button>
+          <button class="pop-btn" id="form-learnmore">Send a DM</button>
         </div>
       </div>
       <!-- whatsapp popup -->
